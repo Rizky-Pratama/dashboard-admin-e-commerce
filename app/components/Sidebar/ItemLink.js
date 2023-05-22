@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 export default function ItemLink({ href, icon, children }) {
   const pathname = usePathname();
   const isActive = pathname === href;
-  console.log(pathname);
   return (
     <li>
       <Link

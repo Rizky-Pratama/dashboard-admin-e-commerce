@@ -3,9 +3,9 @@ import ListLinks from "./ListLinks";
 
 export default function Sidebar() {
   return (
-    <aside className="bg-white px-8 w-[256px] min-h-screen rounded-xl">
+    <aside className="bg-white w-[256px] min-h-screen rounded-xl">
       <nav>
-        <div className="py-5 flex gap-8">
+        <div className="py-5 px-8 flex gap-8">
           <Image
             src="/logo.svg"
             width={15}
@@ -17,9 +17,7 @@ export default function Sidebar() {
             Shop.<span className="text-secondary">View</span>
           </p>
         </div>
-        <div>
-          <ListLinks/>
-        </div>
+        <ListLinks />
       </nav>
     </aside>
   );
