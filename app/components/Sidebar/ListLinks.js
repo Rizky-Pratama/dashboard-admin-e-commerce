@@ -42,7 +42,7 @@ export default function ListLinks() {
     <div className="relative px-8">
       <div
         ref={markRef}
-        className="absolute w-1 h-7 left-0 top-[25px] bg-primary rounded transition-all duration-300"
+        className="absolute w-1 h-7 left-0 top-[25px] bg-primary rounded transition-all"
       ></div>
       <ul
         ref={listRef}

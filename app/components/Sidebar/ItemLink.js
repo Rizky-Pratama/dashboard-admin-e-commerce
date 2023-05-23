@@ -1,12 +1,15 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useContext } from "react";
+import { SidebarContext } from "./Sidebar";
 
 export default function ItemLink({ href, icon, children }) {
   const pathname = usePathname();
   const isActive = pathname === href;
+  const sidebarIsActive = useContext(SidebarContext)
   return (
-    <li>
+    <li className="h-6">
       <Link
         href={href}
         className={`flex gap-8 font-medium text-base ${
@@ -24,7 +27,7 @@ export default function ItemLink({ href, icon, children }) {
           alt="Icon Dashboard"
           priority
         /> */}
-        {children}
+        <p className={`${sidebarIsActive ? "visible" : "invisible scale-0"} transition-all`}>{children}</p>
       </Link>
     </li>
   );
